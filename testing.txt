@@ -1,0 +1,67 @@
+// unit tests
+
+multiplication(x, y)
+
+concatOdds(x, y)
+
+------------------------------
+
+Expect multiplication(5, 10) to be 50
+
+Expect multiplication(1, 0) to be 0
+
+Expect multiplication(0, 0) to be 0
+
+Expect multiplication(-1, 0) to be 0
+
+Expect multiplication(-1, -1) to be 1
+
+Expect multiplication(50, -1) to be -50
+
+Expect multiplication(50, 1/2) to be 25
+
+Expect multiplication(50, 1/0) to be infinity
+
+Expect multiplication(10, "a") to be an error / NaN
+
+Expect multiplication(10) to be an error / NaN
+
+Expect multiplication() to be an error / NaN
+
+Expect concatOdds([1,2,3,4,5,6,7,8,9], [1,2,3,4,5,6,7,8,9]) to be [1, 1, 3, 3, 5, 5, 7, 7, 9, 9]
+
+Expect concatOdds([2, 4, 6, 8], [9, 7, 5, 3, 1]) to be [1, 3, 5, 7, 9]
+
+Expect concatOdds([-2, -4, -6, -8], [-9, -7, -5, -3, -1]) to be [-1, -3, -5, -7, -9]
+
+Expect concatOdds([3], [3]) to be [3, 3]
+
+Expect concatOdds([3], []) to be [3] 
+
+Expect concatOdds([3]) to be error / NaN
+
+Expect concatOdds() to be error / NaN
+
+------------------------------
+
+// functional tests
+
+A shopping cart checkout feature that allows a user to check out as a guest (without an account), 
+or as a logged-in user. They should be allowed to do either, 
+but should be asked if they want to create an account or log in if they check out as a guest.
+
+------------------------------
+
+When a user "has an empty shopping cart", then "the shopping icon should have a 0 to indicate an empty cart".
+
+When a user "hovers their mouse on the shopping cart", then "a small container should show a list of items in the cart".
+
+When a user "adds items to the shopping cart without logged in", then "the cart should still update and save changes".
+
+When a user "adds items to the shopping cart while logged in", then "the cart should still update and save changes".
+
+When a user "clicks on the shopping cart icon", then "move to the checkout page".
+
+When a user "has items in cart and clicked on the shopping cart icon without logged in", then "promp the user to create an account or login in".
+
+When a user "has items in cart and clicked on the shopping cart icon while logged in", then "go straight to checkout page". 
